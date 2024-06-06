@@ -10,34 +10,49 @@
 <body>
     <div class="container-fluid">
         <div class="row">
+            <!-- Entrada de Texto -->
+            <div class="col-md-10 mx-auto py-5">
+                <div class="row">
+                    <form action="">
+                        <label for="datoTitulo">Escribe tu Nuevo Título</label>
+                        <input id="datoTitulo" class="form-control mb-2" type="text">
+                        <label for="datoTexto">Escribe tu mensaje</label>
+                        <input id="datoTexto" class="form-control mb-2" type="text">
+                        <button type="button" class="btn btn-secondary" id="updateTextBtn">Actualizar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Botones y Funcionalidades -->
             <div class="col-md-10 mx-auto py-5">
                 <div class="row">
                     <div class="col-md-5 cubo">
                         <div id="liveAlertPlaceholder"></div>
-                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
+                        <button type="button" class="btn btn-primary" id="liveAlertBtn">Mostrar Alerta</button>
                     </div>
                     <div class="col-md-5 cubo">
-                        <button popovertarget="my-popover">my-popover</button>
-                        <div class="" id="my-popover" popover>
+                        <button class="btn btn-primary" id="popoverBtn" data-bs-toggle="popover" data-bs-content="#my-popover">Mostrar Popover</button>
+                        <div class="d-none" id="my-popover">
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, fugiat!</p>
                         </div>
                     </div>
+                    
                     <div class="col-md-5 cubo">
-                        <button onclick="launch_toast()">Show Toast</button>
+                        <button class="btn btn-primary" onclick="launch_toast()">Mostrar Toast</button>
                         <div id="toast">
                             <div id="img">Icon</div>
                             <div id="desc">A notification message..</div>
                         </div>
                     </div>
                     <div class="col-md-5 cubo">
-                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+                        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Mostrar Offcanvas</button>
                         <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
                             <div class="offcanvas-header">
-                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
+                                <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Título del Offcanvas</h5>
                                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                             </div>
                             <div class="offcanvas-body">
-                                <p>Try scrolling the rest of the page to see this option in action.</p>
+                                <p id="offcanvasContent">Contenido del Offcanvas.</p>
                             </div>
                         </div>
                     </div>
@@ -45,6 +60,7 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
